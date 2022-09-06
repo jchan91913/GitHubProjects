@@ -20,3 +20,4 @@ Let's you look through repositories belonging to a **user** or an **organization
 - Add Dark mode and be able to toggle Light and Dark modes
 - Find a better way to call child Vue component methods from a parent component without using `this.$refs`
 - Be able to choose a branch to fetch recent commits from
+- Remove blank area below `Show Commits` button on repository card

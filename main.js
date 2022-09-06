@@ -1,6 +1,6 @@
 // Not the best place to store but it will do for now
 const secret = {
-    API_TOKEN: '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'
+    API_TOKEN: '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'
 };
 
 const app = new Vue({
