@@ -2,6 +2,8 @@
 
 Let's you look through repositories belonging to a **user** or an **organization** and preview recent commits from a selected repository's **default branch**.
 
+Live version can be found [here](http://iamjosh.xyz/GitHubProjects/index.html/).
+
 ## Features
 
 - Ability to search for both user and organization repositories
