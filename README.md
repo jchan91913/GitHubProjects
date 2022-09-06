@@ -1,6 +1,6 @@
 # GitHub Projects
 
-Let's you look through repositories belonging to a **user** or an **organization** and preview recent commits from a selected repository's **default branch**.
+Lets you look through repositories belonging to a **user** or an **organization** and preview recent commits from a selected repository's **default branch**.
 
 Live version can be found [here](http://iamjosh.xyz/GitHubProjects/).
 
@@ -11,7 +11,8 @@ Live version can be found [here](http://iamjosh.xyz/GitHubProjects/).
 - Pagination when repository results exceed the API default **30** count
 
 ## Frameworks and Libraries
-- [Vue 2](https://v2.vuejs.org/) (Front end framework)
+
+- [Vue](https://v2.vuejs.org/) (Front end framework)
 - [Semantic UI](https://semantic-ui.com/) (UI framework)
 - [Axios](https://axios-http.com/) (HTTP client)
 - [Luxon](https://moment.github.io/luxon/#/) (JS dates and times library)
