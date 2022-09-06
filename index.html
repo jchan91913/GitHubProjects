@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GitHub Projects</title>
+        <!-- Libraries styling -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <!-- Component styling -->
+        <link rel="stylesheet" href="components/RepoItem/RepoItem.css">
+        <link rel="stylesheet" href="components/RepoList/RepoList.css">
+        <!-- Main styling -->
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="app" class="ui grid two column centered container">
+            <div class="row">
+                <div class="column">
+                    <h1 class="ui huge header">
+                        <i class="github violet icon"></i>
+                        <div class="content">
+                            GitHub Projects
+                            <div class="sub header">
+                                Preview repositories from a selected user or organization.
+                            </div>
+                        </div>
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="ui fluid action huge input">
+                        <input
+                            v-model="searchTerm"
+                            type="text"
+                            placeholder="Search for a user/org..."
+                            @keyup.enter="search"
+                        >
+                        <button
+                            class="ui blue button"
+                            @click="search"
+                        >
+                            <i class="search icon"></i> Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div
+                v-if="message !== null"
+                class="row"
+            >
+                <div class="column">
+                    <div :class="['ui', 'message', message.type]">
+                        <div class="header">{{ message.header }}</div>
+                        <p>{{ message.detail }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <repo-list
+                        ref="repoListRef"
+                        @msg-update="updateMessage"
+                        @msg-clear="clearMessage"
+                    ></repo-list>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frameworks and libraries -->
+        <!-- Note: Semantic UI depends on jQuery -->
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
+        <!-- Filters -->
+        <script src="filters/DateTime.js"></script>
+        <script src="filters/String.js"></script>
+        <!-- Components -->
+        <script src="components/CommitItem/CommitItem.js"></script>
+        <script src="components/CommitList/CommitList.js"></script>
+        <script src="components/RepoItem/RepoItem.js"></script>
+        <script src="components/RepoList/RepoList.js"></script>
+        <!-- Main -->
+        <script src="main.js"></script>
+    </body>
+</html>
